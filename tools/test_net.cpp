@@ -1,0 +1,76 @@
+// Copyright 2013 Yangqing Jia
+//
+// This is a simple script that allows one to quickly test a network whose
+// structure is specified by text format protocol buffers, and whose parameter
+// are loaded from a pre-trained network.
+// Usage:
+//    test_net net_proto pretrained_net_proto iterations [CPU/GPU] [seed?]
+
+#include <cuda_runtime.h>
+
+#include <cstring>
+#include <cstdlib>
+
+#include <cstdio>
+#include <vector>
+
+#include "caffe/caffe.hpp"
+
+int main(int argc, char** argv) {
+  // if (argc < 4) {
+  //   LOG(ERROR) << "test_net net_proto pretrained_net_proto iterations "
+  //       << "[CPU/GPU] [random seed]";
+  //   return 0;
+  // }
+    
+  // cudaSetDevice(0);
+  // Caffe::set_phase(Caffe::TEST);
+
+  // if (argc >= 5 && strcmp(argv[4], "GPU") == 0) {
+  //   LOG(ERROR) << "Using GPU";
+  //   Caffe::set_mode(Caffe::GPU);
+  // } else {
+  //   LOG(ERROR) << "Using CPU";
+  //   Caffe::set_mode(Caffe::CPU);
+  // }
+
+  // if (argc == 6) {
+  //   int seed = atoi(argv[5]);
+  //   LOG(INFO) << "Using random seed " << seed;
+  //   srand(seed);
+  //   Caffe::set_random_seed(seed);
+  // }
+
+  // NetParameter test_net_param;
+  // ReadProtoFromTextFile(argv[1], &test_net_param);
+  // Net<float> caffe_test_net(test_net_param);
+  // NetParameter trained_net_param;
+  // ReadProtoFromBinaryFile(argv[2], &trained_net_param);
+  // caffe_test_net.CopyTrainedLayersFrom(trained_net_param);
+
+  // int total_iter = atoi(argv[3]);
+
+  // int show_every = total_iter < 10 ? 1 : total_iter/10;
+
+  // LOG(ERROR) << "Running " << total_iter << " Iterations using " << argv[2] 
+  // 	     << " showing " << show_every << " batches";
+
+  // double test_accuracy = 0;
+  // vector<Blob<float>*> dummy_blob_input_vec;
+  // for (int i = 0; i < total_iter; ++i) {
+  //   const vector<Blob<float>*>& result =
+  //       caffe_test_net.Forward(dummy_blob_input_vec);
+  //   test_accuracy += result[0]->cpu_data()[0];
+  //   if ( i % show_every == 0 )
+  //     LOG(ERROR) << "Batch " << i << ", accuracy: " << result[0]->cpu_data()[0];
+  // }
+  // test_accuracy /= total_iter;
+  // LOG(ERROR) << "Test accuracy:" << test_accuracy;
+  // LOG(ERROR) << "Test error (%):" << 100 - test_accuracy*100;
+  // printf("test accuracy/error: %f %f\n", test_accuracy, 100 - test_accuracy*100);
+
+  LOG(FATAL) << "Deprecated. Use caffe test --model=... "
+      "--weights=... instead.";
+
+  return 0;
+}

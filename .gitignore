@@ -1,0 +1,100 @@
+## General
+
+# Compiled Object files
+*.slo
+*.lo
+
+*.o
+*.a
+*.cuo
+
+# Compiled Dynamic libraries
+
+*.so
+*.bin
+*.pb.h
+*.pb.cc
+
+
+*_pb2.py
+
+# Compiled python
+*.pyc
+
+# Compiled MATLAB
+*.mex*
+
+# build, distribute, and bins
+build
+.build_debug/*
+.build_release/*
+distribute/*
+
+*.testbin
+*.bin
+python/caffe/proto/
+
+# Editor temporaries
+*.swp
+*~
+
+# IPython notebook checkpoints
+.ipynb_checkpoints
+
+## Caffe
+
+# User's build configuration
+Makefile.config
+
+# Data and models are either
+# 1. reference, and not casually committed
+# 2. custom, and live on their own unless they're deliberated contributed
+data/*
+models/*
+#AJ: but include the proto files     
+!models/sicnn
+models/sicnn/log*
+models/sicnn/snapshot*
+!src/caffe/test/test_data/cat.jpg
+
+*.supp
+*.jpg
+*.png
+*.caffemodel
+*.solverstate
+*.binaryproto
+*leveldb
+*lmdb
+
+# LevelDB files
+*.sst
+*.ldb
+LOCK
+LOG*
+CURRENT
+MANIFEST-*
+
+# Generated documentation
+docs/_site
+
+/matlab/caffe/mnist/*.mat
+/matlab/caffe/mnist/*.png
+/matlab/caffe/toy/protos/
+/models/mnist/cvalid/train_script.sh
+
+/models/mydataset/jk12-sicnn-60k-test-errors
+
+docs/gathered
+_site
+doxygen
+docs/dev
+
+# Sublime Text settings
+*.sublime-workspace
+*.sublime-project
+
+# Eclipse Project settings
+*.*project
+
+# CMake generated files
+*.gen.cmake

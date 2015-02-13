@@ -1,0 +1,24 @@
+# ----------
+# STAGE 1 of 700-200-100
+# ----------
+epoch_size: 78
+
+net: "protos/sicnn_train10k_train_test_mnist-sc_split1.prototxt"
+test_iter: 100
+
+test_interval: 100
+
+base_lr: 0.01
+momentum: 0.9
+weight_decay: 0.0001
+
+lr_policy: "fixed"
+
+display: 50
+max_iter: 700
+
+save_max: true
+snapshot: 200
+
+snapshot_prefix: "snapshot/sicnn_train10k_mnist-sc_split1"
+solver_mode: GPU
