@@ -3,6 +3,7 @@ Locally Scale-Invariant ConvNet Caffe Implementation
 
 This packages implements the scale-invariant ConvNet used in our [NIPS
 2014 Deep Learning & Representation Workshop paper](http://www.umiacs.umd.edu/~kanazawa/papers/sicnn_workshop2014.pdf).
+
 It's based on [BVLC's Caffe](http://caffe.berkeleyvision.org), final merge
 with BVLC/master was on [Oct 20th 2014](https://github.com/BVLC/caffe/commit/c18d22eb92488f02c0256a3fe4ac20a8ad827596).
 
@@ -19,6 +20,7 @@ make runtest
 Changes to BVLC/Caffe
 ---
 The major additions are:
+
 1. `util/transformation.(hpp/cpp/cu)`
    Misc functions needed to apply image transformation using NN
    or bilinear interpolation.
